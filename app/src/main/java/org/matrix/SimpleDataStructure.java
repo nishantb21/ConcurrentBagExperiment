@@ -1,3 +1,5 @@
+package app.src.main.java.org.matrix;
+
 import java.util.Random;
 
 public class SimpleDataStructure {

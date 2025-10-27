@@ -1,3 +1,5 @@
+package app.src.main.java.org.matrix;
+
 public class LinkedArrayList<T> {
     public LinkedArrayListNode<T> head;
 
@@ -7,12 +9,7 @@ public class LinkedArrayList<T> {
 
     void add(T elem) {
         LinkedArrayListNode<T> newHead = new LinkedArrayListNode<T>();
-        newHead.setNext(null );
-        if (head == null) {
-            
-            head = newHead;
-        } else {
-
-        }
+        newHead.setNext(head);
+        head = newHead;
     }
 }
