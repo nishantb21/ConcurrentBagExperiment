@@ -2,6 +2,7 @@ package app.src.main.java.org.matrix;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LinkedArrayListNode<T> {
     public List<T> arrayBlock;
@@ -21,5 +22,14 @@ public class LinkedArrayListNode<T> {
 
     public void setNext(LinkedArrayListNode<T> nxt) {
         next = nxt;
+    }
+
+    public boolean isFull() {
+        return currentIndex == DEFAULT_BLOCK_SIZE;
+    }
+
+    public String toString() {
+        List<String> values = arrayBlock.stream().map(String::valueOf).toList();
+        return String.join(",", values);
     }
 }
