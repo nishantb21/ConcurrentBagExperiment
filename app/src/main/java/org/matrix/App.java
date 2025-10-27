@@ -3,6 +3,7 @@
  */
 package org.matrix;
 import app.src.main.java.org.matrix.ConcurrentBag;
+import app.src.main.java.org.matrix.SimpleDataStructure;
 
 public class App {
     public String getGreeting() {
@@ -10,7 +11,17 @@ public class App {
     }
 
     public static void main(String[] args) {
-        ConcurrentBag c = new ConcurrentBag(2);
+        ConcurrentBag<SimpleDataStructure> c = new ConcurrentBag<SimpleDataStructure>(2);
+
+
+        
+        c.addItem(0, new SimpleDataStructure());
+        c.addItem(0, new SimpleDataStructure());
+        c.addItem(1, new SimpleDataStructure());
+        c.addItem(1, new SimpleDataStructure());
+
+
+        System.out.println(c);
         System.out.println(new App().getGreeting());
     }
 }

@@ -19,4 +19,8 @@ public class SimpleDataStructure {
     int getD2() {
         return d2;
     }
+
+    public String toString() {
+        return String.valueOf(d1) + "/" + String.valueOf(d2);
+    }
 }

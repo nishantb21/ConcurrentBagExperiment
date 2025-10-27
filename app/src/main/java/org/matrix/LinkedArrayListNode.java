@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class LinkedArrayListNode<T> {
     public List<T> arrayBlock;
     public LinkedArrayListNode<T> next;
-    private int DEFAULT_BLOCK_SIZE = 64;
+    private int DEFAULT_BLOCK_SIZE = 1;
     private int currentIndex = 0;
 
     public LinkedArrayListNode() {
@@ -16,7 +16,7 @@ public class LinkedArrayListNode<T> {
     }
 
     public void add(T data) {
-        arrayBlock.set(currentIndex, data);
+        arrayBlock.add(data);
         currentIndex += 1;
     }
 
